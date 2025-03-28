@@ -22,12 +22,10 @@ app.use(express.urlencoded({
 const PRODUCTION_URL = process.env.PRODUCTION_CLIENT_URL
 const DEVELOPMENT_URL = process.env.LOCALHOST_CLIENT_URL
 
-// URL pour le client
-const URL = process.env.NODE_ENV === 'production' ? PRODUCTION_URL : DEVELOPMENT_URL
 
 // CORS (Cross-Origin Resource Sharing)
 app.use(cors({
-    origin: URL,  // Allow all origins
+    origin: [PRODUCTION_URL, DEVELOPMENT_URL],  // Allow all origins
     methods: 'GET, POST, PUT, DELETE',  // Allow all HTTP methods
     credentials: true,  // Allow the client to send cookies
     exposedHeaders: ['Authorization']  // Expose the Authorization header in the response

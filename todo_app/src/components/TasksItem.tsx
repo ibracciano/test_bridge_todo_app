@@ -58,7 +58,7 @@ const TasksItem: React.FC<Todo> = ({ todo, getAllTodos }) => {
         </p>
       </div>
       {/* les boutons */}
-      <div className="opacity-0 group-hover:opacity-100 transition-all duration-700">
+      <div className="opacity-100 lg:opacity-0 group-hover:opacity-100 transition-all duration-700">
         {/* bouton de suppression */}
         <button
           className="bg-red-600 shadow border-2 border-white lg:absolute bottom-2 right-2 w-8 h-8 flex items-center justify-center rounded-full border-r-white p-2 text-white font-semibold hover:bg-red-700 transition-colors duration-500 cursor-pointer"

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { API_ADD_TODO, API_UPDATE_TODO } from "../api/api";
+import GetAllTodos from "../hooks/hook";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const addTodo = async (_: any, formData: FormData) => {
@@ -18,7 +19,7 @@ export const addTodo = async (_: any, formData: FormData) => {
         payload: response.data.data,
       };
     }
-    window.location.reload();
+    GetAllTodos();
     return {
       message: response.data.message,
       payload: null,

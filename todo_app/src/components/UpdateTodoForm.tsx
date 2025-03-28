@@ -10,7 +10,7 @@ const UpdateTodoFormModal: React.FC<PropType> = ({ show }) => {
 
   //   useEffect(() => {
   //     window.location.reload();
-  //   }, [open]);
+  //   }, []);
 
   return (
     <div className="flex items-center justify-center bg-black/40 absolute inset-0 z-50">

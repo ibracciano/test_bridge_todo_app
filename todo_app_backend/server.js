@@ -18,7 +18,7 @@ app.use(express.urlencoded({
 
 // CORS (Cross-Origin Resource Sharing)
 app.use(cors({
-    origin: 'http://localhost:5173',  // Allow all origins
+    origin: 'https://test-bridge-todo-app.vercel.app/',  // Allow all origins
     methods: 'GET, POST, PUT, DELETE',  // Allow all HTTP methods
     credentials: true,  // Allow the client to send cookies
     exposedHeaders: ['Authorization']  // Expose the Authorization header in the response

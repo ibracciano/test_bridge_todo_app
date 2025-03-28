@@ -1,5 +1,5 @@
-// const BASE_URL = "https://test-bridge-todo-app.onrender.com";
-const BASE_URL = "https://test-bridge-todo-app-backend.vercel.app";
+const BASE_URL = "https://test-bridge-todo-app.onrender.com";
+// const BASE_URL = "https://test-bridge-todo-app-backend.vercel.app";
 
 export const API_ADD_TODO = `${BASE_URL}/api/todo/add-todo`;
 export const API_GETALL_TODO = `${BASE_URL}/api/todo/get-todo`;

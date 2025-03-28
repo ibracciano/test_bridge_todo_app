@@ -30,41 +30,29 @@ const TasksList: React.FC<TypeBtn> = ({ state }) => {
   return (
     <>
       <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-3 mt-5 px-5">
-        {state === "all" && todos?.length > 0 ? (
+        {state === "all" &&
+          todos?.length > 0 &&
           todos.map((todo) => {
             return (
               <TasksItem key={todo._id} todo={todo} getAllTodos={getAllTodos} />
             );
-          })
-        ) : (
-          <div className="flex items-center justify-center">
-            <p>Aucune tâche à afficher.</p>
-          </div>
-        )}
+          })}
 
-        {state === "completed" && todoCompleted?.length > 0 ? (
+        {state === "completed" &&
+          todoCompleted?.length > 0 &&
           todoCompleted.map((todo) => {
             return (
               <TasksItem key={todo._id} todo={todo} getAllTodos={getAllTodos} />
             );
-          })
-        ) : (
-          <div className="flex items-center justify-center">
-            <p>Aucune tâche à afficher.</p>
-          </div>
-        )}
+          })}
 
-        {state === "cours" && todoCompleted?.length > 0 ? (
+        {state === "cours" &&
+          todoCompleted?.length > 0 &&
           todoEnCours.map((todo) => {
             return (
               <TasksItem key={todo._id} todo={todo} getAllTodos={getAllTodos} />
             );
-          })
-        ) : (
-          <div className="flex items-center justify-center">
-            <p>Aucune tâche à afficher.</p>
-          </div>
-        )}
+          })}
       </div>
       <div className="px-5 mt-5 flex justify-between py-2 shadow-black bg-white">
         {/* total todo */}

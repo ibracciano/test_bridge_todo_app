@@ -9,7 +9,7 @@ export const addTodo = async (_: any, formData: FormData) => {
     titre,
     description,
   };
-  console.log(data);
+  // console.log(data);
   try {
     const response = await axios.post(API_ADD_TODO, data);
     if (response.data.success) {
@@ -18,6 +18,7 @@ export const addTodo = async (_: any, formData: FormData) => {
         payload: response.data.data,
       };
     }
+    window.location.reload();
     return {
       message: response.data.message,
       payload: null,

@@ -27,7 +27,7 @@ app.use(cors({
 // Routes
 app.use("/api/todo", todoRouter)
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
     const message = 'Hello, World!';
     res.send({ message });
 });
